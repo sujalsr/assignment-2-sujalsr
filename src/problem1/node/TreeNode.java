@@ -13,7 +13,7 @@ public class TreeNode
     private TreeNode right;
 
     public int getData() {
-        return data
+        return data;
     }
 
     public void setData(int data) {
