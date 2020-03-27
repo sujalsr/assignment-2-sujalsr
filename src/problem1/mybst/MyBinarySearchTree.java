@@ -8,7 +8,6 @@ package problem1.mybst;
 
 import problem1.node.TreeNode;
 
-
 public class MyBinarySearchTree {
     TreeNode root;
     int count;
@@ -19,23 +18,23 @@ public class MyBinarySearchTree {
     }
 
     public void insert(int data) {
-        TreeNode ns = new TreeNode();
-        ns.setData(data);
+        TreeNode n = new TreeNode();
+        n.setData(data);
         if (root == null) {
-            root = ns;
+            root = n;
         } else {
             TreeNode current = root;
             while (true) {
                 if (data > current.getData()) {
                     if (current.getRight() == null) {
-                        current.setRight(ns);
+                        current.setRight(n);
                         break;
                     } else {
                         current = current.getRight();
                     }
                 } else {
                     if (current.getLeft() == null) {
-                        current.setLeft(ns);
+                        current.setLeft(n);
                         break;
                     } else {
                         current = current.getLeft();
@@ -46,7 +45,8 @@ public class MyBinarySearchTree {
     }
 
     private void LeftNode(TreeNode root) {
-        if (root == null) return;
+        if (root == null)
+            return;
         else {
             if (root.getLeft() != null) System.out.println(root.getLeft().getData());
             else count++;
@@ -64,7 +64,8 @@ public class MyBinarySearchTree {
     }
 
     public void preorder(TreeNode root) {
-        if (root == null) return;
+        if (root == null)
+            return;
         else {
             System.out.print(root.getData() + "\t");
             preorder(root.getLeft());
@@ -74,7 +75,8 @@ public class MyBinarySearchTree {
     }
 
     public void postorder(TreeNode root) {
-        if (root == null) return;
+        if (root == null)
+            return;
         else {
             postorder(root.getLeft());
             postorder(root.getRight());
