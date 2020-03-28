@@ -14,7 +14,7 @@ public class MyMain {
         MyCircularQueue obj = new MyCircularQueue();
         obj.enqueue(1, 4, 2);
         obj.enqueue(2, 4, 1);
-        obj.enqueue(48, 0, 3);
+        obj.enqueue(48, 3, 3);
         obj.enqueue(5, 2, 0);
         obj.enqueue(39, 2, 2);
         obj.enqueue(69, 0, 1);
