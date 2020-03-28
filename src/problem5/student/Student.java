@@ -15,24 +15,18 @@ public class Student {
         return roll;
     }
 
-    public void setRoll(int roll) {
+    public Student(int roll, int app_count, int backlog) {
         this.roll = roll;
+        this.app_count = app_count;
+        this.backlog = backlog;
     }
 
     public int getApp_count() {
         return app_count;
     }
 
-    public void setApp_count(int app_count) {
-        this.app_count = app_count;
-    }
-
     public int getBacklog() {
         return backlog;
-    }
-
-    public void setBacklog(int backlog) {
-        this.backlog = backlog;
     }
 
     @Override
