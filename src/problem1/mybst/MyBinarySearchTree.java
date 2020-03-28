@@ -87,7 +87,7 @@ public class MyBinarySearchTree {
         }
     }
 
-    public void preVSpost() {
+    public void ComparePrePost() {
 
         System.out.println("Pre-order Traversal :-");
         preOrder(root);

@@ -22,6 +22,6 @@ public class MyMain {
         obj.insert(20);
         obj.insert(3);
         obj.insert(40);
-        obj.preVSpost();
+        obj.ComparePrePost();
     }
 }
