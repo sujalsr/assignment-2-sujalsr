@@ -23,21 +23,21 @@ public class MyBinarySearchTree {
         if (root == null) {
             root = n;
         } else {
-            TreeNode current = root;
+            TreeNode temp = root;
             while (true) {
-                if (data > current.getData()) {
-                    if (current.getRight() == null) {
-                        current.setRight(n);
+                if (data > temp.getData()) {
+                    if (temp.getRight() == null) {
+                        temp.setRight(n);
                         break;
                     } else {
-                        current = current.getRight();
+                        temp = temp.getRight();
                     }
                 } else {
-                    if (current.getLeft() == null) {
-                        current.setLeft(n);
+                    if (temp.getLeft() == null) {
+                        temp.setLeft(n);
                         break;
                     } else {
-                        current = current.getLeft();
+                        temp = temp.getLeft();
                     }
                 }
             }
@@ -45,11 +45,14 @@ public class MyBinarySearchTree {
     }
 
     private void LeftNode(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return;
-        else {
-            if (root.getLeft() != null) System.out.println(root.getLeft().getData());
-            else count++;
+        } else {
+            if (root.getLeft() != null) {
+                System.out.println(root.getLeft().getData());
+            } else {
+                count++;
+            }
             LeftNode(root.getLeft());
             LeftNode(root.getRight());
         }
@@ -63,34 +66,37 @@ public class MyBinarySearchTree {
         System.out.println(count);
     }
 
-    public void preorder(TreeNode root) {
-        if (root == null)
+    public void preOrder(TreeNode root) {
+        if (root == null) {
             return;
-        else {
+        } else {
             System.out.print(root.getData() + "\t");
-            preorder(root.getLeft());
-            preorder(root.getRight());
+            preOrder(root.getLeft());
+            preOrder(root.getRight());
 
         }
     }
 
-    public void postorder(TreeNode root) {
-        if (root == null)
+    public void postOrder(TreeNode root) {
+        if (root == null) {
             return;
-        else {
-            postorder(root.getLeft());
-            postorder(root.getRight());
+        } else {
+            postOrder(root.getLeft());
+            postOrder(root.getRight());
             System.out.print(root.getData() + "\t");
         }
     }
 
     public void preVSpost() {
-        postorder(root);
+
+        System.out.println("Pre-order Traversal :-");
+        preOrder(root);
         System.out.println();
-        preorder(root);
+        System.out.println("Post-order Traversal :-");
+        postOrder(root);
     }
 
-    public TreeNode getroot() {
+    public TreeNode getRoot() {
         return root;
     }
 }
