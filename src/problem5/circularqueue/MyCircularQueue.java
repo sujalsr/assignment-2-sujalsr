@@ -22,26 +22,26 @@ public class MyCircularQueue {
         count = 0;
     }
 
-    public void enqueue(int roll, int backlog, int a_count) {
-        Student st = new Student(roll, backlog, a_count);
-        Node ns = new Node();
-        ns.setStudent(st);
+    public void enqueue(int roll, int backlog, int app_count) {
+        Student stud = new Student(roll, backlog, app_count);
+        Node n = new Node();
+        n.setStudent(stud);
 
         if (front == null) {
-            front = ns;
+            front = n;
         } else {
-            rear.setNext(ns);
+            rear.setNext(n);
         }
 
-        rear = ns;
+        rear = n;
         rear.setNext(front);
         count++;
     }
 
-    public void removeBackLog() {
+    public void eraseBackLog() {
         while (count-- > 0) {
-            Student ss = front.getStudent();
-            if ((ss.getBacklog() - ss.getApp_count()) > 0) {
+            Student stu = front.getStudent();
+            if ((stu.getBacklog() - stu.getApp_count()) > 0) {
                 front = front.getNext();
                 rear = rear.getNext();
             } else {

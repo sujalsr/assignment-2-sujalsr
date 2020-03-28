@@ -15,7 +15,7 @@ public class Student {
         return roll;
     }
 
-    public Student(int roll, int app_count, int backlog) {
+    public Student(int roll, int backlog, int app_count) {
         this.roll = roll;
         this.app_count = app_count;
         this.backlog = backlog;
